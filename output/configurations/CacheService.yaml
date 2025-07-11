@@ -1,0 +1,5 @@
+type: CacheService
+registry_addresses:
+  - "127.0.0.1:8502"
+  - "127.0.0.1:8503"
+  - "127.0.0.1:8504"

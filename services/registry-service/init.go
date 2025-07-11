@@ -1,0 +1,3 @@
+package registryservice
+
+func init() {}

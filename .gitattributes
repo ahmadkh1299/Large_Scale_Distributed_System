@@ -1,0 +1,5 @@
+RunCache.sh text eol=lf
+RunRegistry.sh text eol=lf
+RunTestService.sh text eol=lf
+build.sh text eol=lf
+start.sh text eol=lf

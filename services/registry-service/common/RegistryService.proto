@@ -1,0 +1,29 @@
+syntax = "proto3";
+
+option go_package = "RegistryService";
+
+package registryservice;
+
+// Import the necessary types for streaming and callback
+import "google/protobuf/wrappers.proto";
+import "google/protobuf/empty.proto";
+
+// Define a message type for the request
+message ServiceRequest {
+    string name = 1;
+    string address = 2;
+}
+
+message ServiceNodes{
+    repeated string nodes = 1;
+}
+
+
+service RegistryService {
+
+    rpc Register(ServiceRequest) returns (google.protobuf.Empty);
+    
+    rpc Unregister(ServiceRequest) returns (google.protobuf.Empty);
+
+    rpc Discover(google.protobuf.StringValue) returns (ServiceNodes);
+}
